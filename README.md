@@ -1,8 +1,8 @@
 # Dynamic Labor Supply - Guaranteed Income
 
-This folder directory contains code to generate results for Section 6.3 of Vivalt et al. (2024) https://www.nber.org/papers/w32719
-The readme is the technical note
-Author: Leonard Chun Kit Dai
+This folder directory contains code to generate results for Section 6.3 of Vivalt et al. (2024) https://www.nber.org/papers/w32719   
+This Read is the technical note for the model  
+Author: Leonard Chun Kit Dai  
 
 
 ## Characterising the Optimisation Problem
