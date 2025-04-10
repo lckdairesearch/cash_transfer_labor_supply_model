@@ -94,7 +94,7 @@ In the economic literature, it’s common to solve for `N` nodes for `N` spline 
 
 By computing $V_t(A_{n})$   where $A_n \in \{A_1, A_2, …, A_{\text{N-nodes}}\}$ we can find $\pmb{\alpha}_t$ and thus approximate the function $V_t(A_t)$
 
-![Example of basis functions](Dynamic%20Labor%20Supply%20-%20Guaranteed%20Income%20f2ec4bcd0ade49828465370b8c72b10e/Untitled.png)
+![alt text](READMEimages/Untitled.png)  
 
 Example of basis functions
 
@@ -102,9 +102,9 @@ Example of basis functions
 
 In practice, we found the standard method to solve`N` nodes for `N` spline functions to be unreliable. The functional form is too sensitive to the choice of knots and it is very prone to over fitting. Moreover, due to the backward solving nature of the problem (explained in more detail below) small fitting errors for values in between the knots are magnified  in subsequent approximation. Illustration 1 below shows the utility function approximated using the standard method. Illustration 2 shows the preferred smoothing splines approximation method we used. 
 
-![Untitled](Dynamic%20Labor%20Supply%20-%20Guaranteed%20Income%20f2ec4bcd0ade49828465370b8c72b10e/Untitled%201.png)
+![alt text](READMEimages/Untitled%201.png)  
 
-![Untitled](Dynamic%20Labor%20Supply%20-%20Guaranteed%20Income%20f2ec4bcd0ade49828465370b8c72b10e/Untitled%202.png)
+![alt text](READMEimages/Untitled%202.png)
 
 To quickly grasp the smoothing splines, it is important to know 1. it is possible to get coefficients of splines $\mathbb{\hat{\alpha}}$ by regression (commonly referred to regression splines) 2. we can apply regularisation techniques on regression, commonly Ridge and LASSO
 
@@ -172,8 +172,7 @@ However, the chosen paths even after the end of Guaranteed Income Transfer would
 
 ## Quasi-Hyperbolic Discounting
 
-![Untitled](Dynamic%20Labor%20Supply%20-%20Guaranteed%20Income%20f2ec4bcd0ade49828465370b8c72b10e/Untitled%203.png)
-
+![alt text](READMEimages/Untitled%203.png)  
 We assume agent hyperbolic discounting. Meaning that agent has “present-bias”. We follow the standard literature of using Quasi-hyperbolic discounting to approximate hyperbolic function. 
 
 Revisiting Standard Bellman:
@@ -304,7 +303,7 @@ In the next period the agent the window shift forward and agent look ahead to pe
 
 - Note that $A_{t+1}^{RW} \leq A_{t+1}^{std}$ because agents are looking forward to a shorter horizon, but if discount factor $\delta$ is small enough $A_{t+1}^{RW} \approx A_{t+1}^{std}$
 
-![Screenshot 2024-02-18 at 12.57.53 AM.png](Dynamic%20Labor%20Supply%20-%20Guaranteed%20Income%20f2ec4bcd0ade49828465370b8c72b10e/Screenshot_2024-02-18_at_12.57.53_AM.png)
+![alt text](READMEimages/Screenshot_2024-02-18_at_12.57.53_AM.png)  
 
 At each t, 
 
