@@ -1,6 +1,9 @@
 # Dynamic Labor Supply - Guaranteed Income
 
-This is a technical note for Section 6.3 of Vivalt et al. (2024) https://www.nber.org/papers/w32719
+This folder directory contains code to generate results for Section 6.3 of Vivalt et al. (2024) https://www.nber.org/papers/w32719
+The readme is the technical note
+Author: Leonard Chun Kit Dai
+
 
 ## Characterising the Optimisation Problem
 
@@ -160,7 +163,7 @@ Note that bellman quation maximizes the **expected** utility from the next perio
 
 $`
 V_t(A_t) = \max_{c_t, l_t, A_{t+1}} U(c_t, l_t) + \delta \mathbb E[V_{t+1}(A_{t+1})]
-$`
+`$
 
 To be more concrete, If the agents know that he will receive the Guaranteed Income Transfer in period 10. From period 1 to period 9, his decisions, $V_t(A_t) \forall t\in \{1, 2, ..., 9\}$, $\mathbb E [V_{t+1}(A_{t+1})] \forall t\in \{1, 2, ..., 9\} = \textcolor{red}{\mathbb E} [V_{t}(A_{t})] \forall t\in \{2, 3, ..., \textcolor{red}{10}\}$  will be the same as another agent who will not receive the transfer. From period 10, the agent will have a different $V_t^{treat}(A_t)$
 
