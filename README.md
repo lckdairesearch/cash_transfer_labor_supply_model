@@ -133,7 +133,7 @@ $`
 
 **Smoothing Splines:**
 
-Smoothing splines add regularisation terms to the standard regression splines. It might be useful to be reminded that the minimisation criterion for ridge regression is $\| \mathbb{y} - \mathbb{X} \beta\|_2^2 + \lambda \| \beta \|_2^2$p
+Smoothing splines add regularisation terms to the standard regression splines. It might be useful to be reminded that the minimisation criterion for ridge regression is $\| \mathbb{y} - \mathbb{X} \beta\|_2^2 + \lambda \| \beta \|_2^2$
 
 Similarly, smoothing splines minimises
 
@@ -183,8 +183,7 @@ Revisiting Standard Bellman:
 *Let*
 
 $`
-S(c_t, l_t) = u(c_t) + B v(l_t)
-`$
+S(c_t, l_t) = u(c_t) + B v(l_t)`$
 
 In the standard model: 
 
@@ -192,19 +191,15 @@ $`
 \begin{aligned}
 V_t(A_t) & = & S(c_t^*, l_t^*)
  & + & \delta S(c_{t+1}^*, l_{t+1}^*) & + & \delta^2 S(c_{t+2}^*, l_{t+2}^*)  & + & \delta^3 S(c_{t+2}^*, l_{t+2}^*) & + & ... \\
-
 V_t(A_{t+1}) & = & & & S(c_t^*, l_t^*) & + & \delta S(c_{t+1}^*, l_{t+1}^*) & + & \delta^2 S(c_{t+2}^*, l_{t+2}^*) & + & ... \\
-
-\end{aligned} 
-`$
+\end{aligned}`$
 
 by substituting $V_t(A_{t+1})$ into $V_t(A_t)$ We have the bellman equation
 
 $`
 \begin{aligned}
 V_t(A_t) = S(c_t^*, l_t^*) + \delta \mathbb E[V_{t+1}(A_{t+1})]
-\end{aligned}
-`$
+\end{aligned}`$
 
 With quasi-hyperbolic Discounting
 
@@ -290,8 +285,7 @@ Therefore at each period $t$,
 The agent has look ahead to period $D_t = \min (t+W-1, T)$
 
 $`
-\max_{\{c_t, l_t, A_{t+1}\}_2^{D_t} }\sum_{t=1}^{D_t} \delta^{t-1}[u(c_t - \gamma_c) - B v(l_t)]
-`$  
+\max_{\{c_t, l_t, A_{t+1}\}_2^{D_t} }\sum_{t=1}^{D_t} \delta^{t-1}[u(c_t - \gamma_c) - B v(l_t)]`$  
 
 $`
 \begin{aligned}
@@ -299,8 +293,7 @@ s.t. &&&\\
 &A_{t+1} & = & (1+r)[A_t + w_tl_t - c_t + I_t + TR_t] \\
 &c_t & \geq & 0 \\
 &A_{D_t} & = & 0
-\end{aligned}
-`$
+\end{aligned}`$
 
 In the next period the agent the window shift forward and agent look ahead to period $D_{t+1} = \min (t+W, T)$ 
 
@@ -315,7 +308,7 @@ note, however, that  $\{\pmb{a}\}_{t=t}^{D}$ is computationally equivalent to $\
 
 Therefore, a collection of standard model with different terminal periods from $t=1$ is solved. 
 
-i.e. solve $\{\{\pmb{a}\}_{t=1}^{fl}\}_{fl = W}^T$ , $fl$ is how much forward-looking form $t = 1$
+i.e. solve $\{\{\pmb{a}\}_{t=1}^{fl}\}_{fl = W}^T$, $fl$ is how much forward-looking form $t = 1$
 
 - $fl$ is numerically identical to $D$
     
